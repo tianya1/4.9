@@ -1,0 +1,52 @@
+      1.os.walk()
+      ########
+      import os
+
+      try:
+          for root, dirs, files in os.walk(r"c:\python36"):
+              print("\033[1;31m-"*8, "directory", "<%s>\033[0m" % root, "-"*10)
+              for directory in dirs:
+                  print("\033[1;34m<DIR>    %s\033[0m" % directory)
+              for file in files:
+                  print("\t\t%s" % file)
+      except OSError as ex:
+          print(ex)
+    
+    
+    
+     2. sys.argv    获取命令行参数列表，第一个元素是程序本身
+      #########
+      import sys
+      for index, arg in enumerate(sys.argv):
+        print("第%d个参数是： %s" % (index, arg))
+
+     3. encode
+      decode
+      ######
+      u = '中文' 
+      type(u)
+      str
+      s1=u.encode('utf-8')
+      type(s1)
+      byte
+      s2=s1.decode('utf-8')
+      type(s2)
+      str
+      
+4.bytes      
+s = 'this is a test'
+b = bytes(s,encoding='utf-8')
+b
+b'this is a test'
+######
+5.
+要读取非UTF-8编码的文本文件，需要给open()函数传入encoding参数，例如，读取GBK编码的文件：
+>>> f = open('test.txt', 'r', encoding='gbk')
+>>> f.read()
+'测试'
+
+>>> f = open('test.txt', 'r', encoding='gbk', errors='ignore')
+str->bytes:encode编码
+bytes->str:decode解码　　
+      
+    
