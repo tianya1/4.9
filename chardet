@@ -1,0 +1,7 @@
+import chardet
+path='neg.0.txt'
+f=open(path,'rb')
+data=f.read()
+print(chardet.detect(data))
+
+获取文本编码方式
