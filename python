@@ -1,0 +1,24 @@
+import keyword
+print(keyword.kwlist)
+
+type 
+
+id 
+
+int float complex 
+x and y
+x or y
+not x
+
+str='hello \
+world'
+
+str='''
+hello
+world
+'''
++ join()
+in not in
+str='%s %s %s' %(str1,str2,str3) 
+format()
+
